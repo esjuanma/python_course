@@ -2,7 +2,6 @@
 . Esto lo hizo
 . Martín, Bri y Juanma
 . El 4 de marzo 2020
-. @copyright
 """
 
 # Comentario
