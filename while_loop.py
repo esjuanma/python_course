@@ -4,7 +4,7 @@ numberOfNames = int(input('How many names do you know? '))
 # Asks user for 3 different name
 names = []
 
-# Counter for while loop
+# Counter forwhile loop
 count = 1
 
 # Loops while
@@ -22,6 +22,11 @@ else:
 nameNumber = 0
 
 # Shows names
-for name in names:
+while nameNumber < len(names):
     nameNumber = nameNumber + 1
-    print('Name n', nameNumber, ':', name)
+    print('Name n', nameNumber, ':', names[nameNumber - 1])
+
+# Immediate break!
+while True:
+    print('Only once!')
+    break
