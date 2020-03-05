@@ -1,0 +1,8 @@
+git init
+git status
+git add (archivo/s)
+git commit -m "Mensaje"
+git push origin master
+git remote add origin url_del_repo
+git clone url_del_repo
+git pull url_del_repo
