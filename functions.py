@@ -7,6 +7,6 @@ def sumar (num1, num2):
   return value
   
 message()
-sumar(5, 7)
+print(sumar(5, 7))
 
 print('Afuera de la función')
