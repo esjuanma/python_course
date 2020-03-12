@@ -1,0 +1,170 @@
+PS C:\Python> git config user.name
+bcharlin
+PS C:\Python> git config user.email
+bcharlin11@gmail.com
+PS C:\Python> git clone https://github.com/bcharlin/Test.git
+Cloning into 'Test'...
+Username for 'https://github.com': bcharlin11@gmail.com
+Password for 'https://bcharlin11@gmail.com@github.com':
+remote: Enumerating objects: 3, done.
+Unpacking objects: 100% (3/3), 579 bytes | 14.00 KiB/s, done.
+PS C:\Python> ls
+
+
+    Directory: C:\Python
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----        3/11/2020   8:21 PM                Test
+
+
+
+    Directory: C:\Python\Test
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----        3/11/2020   5:54 PM           2485 1.py
+-a----        3/11/2020   5:10 PM           2028 PracticeLabs.py
+First commit
+
+
+PS C:\Python\Test> git add .\1.py
+PS C:\Python\Test> git add .\PracticeLabs.py
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   1.py
+        new file:   PracticeLabs.py
+
+PS C:\Python\Test> git commit
+[master 1a3722a] First commit
+ create mode 100644 PracticeLabs.py
+PS C:\Python\Test> git push
+Username for 'https://github.com': bcharlin11@gmail.com
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.96 KiB | 400.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/bcharlin/Test.git
+   3549c88..1a3722a  master -> master
+PS C:\Python\Test> git config --global credential.helper store
+PS C:\Python\Test> git pull
+Username for 'https://github.com': bcharlin11@gmail.com
+Already up to date.
+PS C:\Python\Test> cd ..
+PS C:\Python> ls
+
+
+    Directory: C:\Python
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----        3/11/2020   8:21 PM                Test
+
+
+PS C:\Python> git clone https://github.com/esjuanma/python_course
+Cloning into 'python_course'...
+remote: Enumerating objects: 40, done.
+remote: Counting objects: 100% (40/40), done.
+remote: Compressing objects: 100% (28/28), done.
+PS C:\Python> ls
+
+
+    Directory: C:\Python
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----        3/11/2020   8:29 PM                python_course
+d-----        3/11/2020   8:21 PM                Test
+
+
+PS C:\Python> cd .\python_course\
+PS C:\Python\python_course> ls
+
+
+    Directory: C:\Python\python_course
+
+----                -------------         ------ ----
+d-----        3/11/2020   8:29 PM                exercises
+d-----        3/11/2020   8:29 PM                git
+d-----        3/11/2020   8:29 PM                homework
+-a----        3/11/2020   8:29 PM            642 basics.py
+-a----        3/11/2020   8:29 PM            353 flow_control.py
+-a----        3/11/2020   8:29 PM            621 for_loop.py
+-a----        3/11/2020   8:29 PM            184 functions.py
+-a----        3/11/2020   8:29 PM             93 list.py
+-a----        3/11/2020   8:29 PM            665 while_loop.py
+
+PS C:\Python\python_course\homework> ls
+
+
+    Directory: C:\Python\python_course\homework
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----        3/11/2020   8:30 PM                solutions
+-a----        3/11/2020   8:29 PM            465 1.py
+
+
+PS C:\Python\python_course\homework> cd ..
+PS C:\Python\python_course> ls
+
+
+    Directory: C:\Python\python_course
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----        3/11/2020   8:29 PM                exercises
+d-----        3/11/2020   8:29 PM                git
+d-----        3/11/2020   8:29 PM                homework
+-a----        3/11/2020   8:29 PM            642 basics.py
+-a----        3/11/2020   8:29 PM            353 flow_control.py
+-a----        3/11/2020   8:29 PM            621 for_loop.py
+-a----        3/11/2020   8:29 PM            665 while_loop.py
+
+
+PS C:\Python\python_course> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Homework 1 solved
+  (use "git add <file>..." to include in what will be committed)
+        homework/solutions/
+
+PS C:\Python\python_course> git add .\homework\solutions\1_solved.py
+PS C:\Python\python_course> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+  (use "git restore --staged <file>..." to unstage)
+        new file:   homework/solutions/1_solved.py
+PS C:\Python\python_course> git commit
+[master 1500c8c] Homework 1 solved
+ 1 file changed, 82 insertions(+)
+ create mode 100644 homework/solutions/1_solved.py
+PS C:\Python\python_course> git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS C:\Python\python_course> git push
+remote: Permission to esjuanma/python_course.git denied to bcharlin.
+fatal: unable to access 'https://github.com/esjuanma/python_course/': The requested URL returned error: 403
+PS C:\Python\python_course> git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 1.41 KiB | 482.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/esjuanma/python_course
+   a95dcd8..1500c8c  master -> master
