@@ -1,6 +1,8 @@
 # Lista de gastos
 servicesNames = []
 servicesValues = []
+folder = 'database/'
+ext = '.txt'
 
 def askToContinue():
     print('====================================================')
@@ -69,14 +71,14 @@ def printData(total):
         # print('El nombre del servicio es:', servicesNames[nameNumber], 'y cuesta: $', , '- (', percentage, '%)')
         nameNumber = nameNumber + 1
 
-def save(date):
+def save(month):
     # Opens file and creates file variable
-    with open('expenditures.txt', 'a') as file:
+    with open(folder + month + ext, mode = 'a', encoding = 'utf-8') as file:
         # Create counter for the loop
         nameNumber = 0
 
-        if date:
-            file.write(date + '\n')
+        # if date:
+        #    file.write(date + '\n')
 
         # For each service
         while nameNumber < len(servicesNames):
@@ -90,9 +92,13 @@ def save(date):
             # Increases counter (avoids infinites loops and 50megas files)
             nameNumber += 1
         
-        if date:
-            file.write('\n')
+        #if date:
+        #    file.write('\n')
 
 # Read file and print current information
-def read():
-    print('Pendiente')
+def read(month):
+    filePath = folder + month + ext
+    
+    with open(filePath, encoding = 'utf-8') as file:
+        for line in file:
+            print(line, end = '')
