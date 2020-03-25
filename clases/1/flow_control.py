@@ -17,5 +17,7 @@ if genre == 'macho':
     print('Sos hombre!')
 elif genre == 'hembra':
     print('Sos mujercita!')
+elif genre == 'perro'
+    print('Sos un perro!')
 else:
     print('...')
