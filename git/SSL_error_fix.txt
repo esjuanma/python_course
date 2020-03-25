@@ -1,0 +1,12 @@
+# Fails when trying to pull or clone repo data
+PS C:\Red\Python\python_course> git pull
+fatal: unable to access 'https://github.com/esjuanma/python_course/': SSL certificate problem: self signed certificate in certificate chain
+
+# Temporarily disable SSL
+PS C:\Red\Python\python_course> git config --global http.sslVerify false
+
+# Pull data from repo (or clone)
+PS C:\Red\Python\python_course> git pull
+
+# Enable SSL
+PS C:\Red\Python\python_course> git config --global http.sslVerify false
