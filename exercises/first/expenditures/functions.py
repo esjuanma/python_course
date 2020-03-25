@@ -118,6 +118,7 @@ def save(month):
         #    file.write('\n')
 
 # Read file and print current information
+# PENDIENTE!! Agregar manipulación de fechas para organización de registros
 def read(month):
     filePath = folder + month + ext
     
