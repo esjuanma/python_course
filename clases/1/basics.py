@@ -22,6 +22,7 @@ MY_CONSTANT = True
 
 # Tipos de datos complejos
 myList = [10, 25, 50]
+
 myList[0] # 10
 myList[1] # 25
 
