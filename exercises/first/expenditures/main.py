@@ -2,8 +2,9 @@ import functions
 import helpers
 
 # Asks
-#functions.printData(functions.askForExpenditures())
+data = functions.askForExpenditures()
+functions.printData(data)
 
-#functions.save(helpers.getMonth())
+functions.save(helpers.getMonth())
 
-functions.read(helpers.getMonth())
+# functions.read(helpers.getMonth())

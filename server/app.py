@@ -7,8 +7,11 @@ totalScore = 0
 @app.route('/home')
 def home():
     global totalScore
+
+    # Gets score argument from URL
     score = request.args.get('score')
 
+    # If argument exists
     if score is not None:
         score = int(score)
         totalScore = totalScore + score

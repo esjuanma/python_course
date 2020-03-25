@@ -1,7 +1,19 @@
+from datetime import datetime
+
 # Lista de gastos
 servicesNames = []
 servicesValues = []
-folder = 'database/'
+servicesDates = []
+
+"""services = [{
+    name: 'Luz',
+    value: 500,
+    date: '26/03/2020'
+}, {
+    ...
+}]"""
+
+folder = './exercises/first/expenditures/database/'
 ext = '.txt'
 
 def askToContinue():
@@ -31,12 +43,20 @@ def askForExpenditures():
                 print('Ingrese un numero valido')
                 continue
 
+            # Asks for date
+            serviceDate = input('Ingrese la fecha del gasto con formato dd/mm/aaaa (dejar vacío para fecha actual)')
+
+            if serviceDate == '':
+                now = datetime.now()
+                serviceDate = now.strftime("%d/%m/%Y")
+
             # Converts to integer
             serviceValue = int(serviceValue)
 
             # Appends values
             servicesValues.append(serviceValue)
             servicesNames.append(serviceName)
+            servicesDates.append(serviceDate)
 
             # Sums total
             total = total + serviceValue
@@ -65,6 +85,8 @@ def printData(total):
         message += ' - ('
         message += str(percentage)
         message += '%)'
+        message += ' - '
+        message += servicesDates[nameNumber]
 
         print(message)
 
@@ -87,7 +109,7 @@ def save(month):
             value = str(servicesValues[nameNumber])
 
             # Writes in file
-            file.write(serviceName + ': $' + value + '\n')
+            file.write(servicesDates[nameNumber] + ' ' + serviceName + ': $' + value + '\n')
 
             # Increases counter (avoids infinites loops and 50megas files)
             nameNumber += 1
